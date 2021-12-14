@@ -2,7 +2,7 @@ import CartWidget from "./Componentes/CartWidget";
 import ItemListContainer from "./Componentes/ItemListContainer";
 import NavBar from "./Componentes/NavBar";
 import ItemCount from "./Componentes/ItemCount";
-
+import ItemDetailContainer from "./Componentes/ItemDetailContainer";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <ItemListContainer greeting="Este es el greeting">
       
       </ItemListContainer>
-      
+      <ItemDetailContainer/>
     </div>
     
     

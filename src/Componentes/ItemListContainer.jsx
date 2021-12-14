@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ItemCount from "../Componentes/ItemCount"
 import ItemList from './ItemList'
 
+
 const ItemListContainer = ({children,greeting}) => {
 
 const array = [
@@ -40,20 +41,7 @@ useEffect(()=> {
 resolveArray()
 }, [])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
+return (
         <div className="container-fluid border border-dark" style={{minHeight:"100vh"}}>
             {children}
            <h1> {greeting} </h1>
