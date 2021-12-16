@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import ItemCount from "../Componentes/ItemCount"
 import ItemList from './ItemList'
+import Rutas from '../Routes/Rutas'
 
 
-const ItemListContainer = ({children,greeting}) => {
+const ItemListContainer = () => {
 
 const array = [
     {id:1,name:"Tomorrowland",stock:45,price:140,img:"",category:"Ticket"},
@@ -20,7 +21,7 @@ const [data, setData] = useState(null)
 let promise = new Promise ((resolve, reject) => {
     setTimeout(() => {
         resolve(array)
-    }, 2000)
+    }, 1000)
 
 })
 
@@ -42,9 +43,9 @@ resolveArray()
 }, [])
 
 return (
-        <div className="container-fluid border border-dark" style={{minHeight:"100vh"}}>
-            {children}
-           <h1> {greeting} </h1>
+        <div className="container-fluid" style={{minHeight:"100vh"}}>
+            
+           
            <ItemList items={data}/>
         </div>
     )

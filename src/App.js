@@ -3,16 +3,18 @@ import ItemListContainer from "./Componentes/ItemListContainer";
 import NavBar from "./Componentes/NavBar";
 import ItemCount from "./Componentes/ItemCount";
 import ItemDetailContainer from "./Componentes/ItemDetailContainer";
+import Rutas from "../src/Routes/Rutas"
 
 function App() {
   return (
     <div>
       <NavBar/>
-      <ItemCount stock="15" initial="0"/>
-
-      <ItemListContainer greeting="Este es el greeting">
+      <Rutas/>
       
-      </ItemListContainer>
+
+      <ItemListContainer/> 
+      
+      
       <ItemDetailContainer/>
     </div>
     
