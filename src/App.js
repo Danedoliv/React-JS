@@ -8,14 +8,15 @@ import Rutas from "../src/Routes/Rutas"
 function App() {
   return (
     <div>
-      <NavBar/>
+       
       <Rutas/>
       
+      
 
-      <ItemListContainer/> 
       
       
-      <ItemDetailContainer/>
+      
+      
     </div>
     
     

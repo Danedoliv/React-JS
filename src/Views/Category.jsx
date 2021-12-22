@@ -1,9 +1,13 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
-export default function Category() {
+export default function Category () {
     return (
-        <div>
-            <h1>Category</h1>
-        </div>
+        <h1>
+            <li>
+            <Link to={'/category'}>Categorias</Link>
+            </li>
+            
+        </h1>
     )
 }

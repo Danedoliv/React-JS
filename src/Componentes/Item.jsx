@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'
 
 
 export default function Item({item}) {
@@ -11,9 +11,9 @@ export default function Item({item}) {
                 <h5 className="card-title text-uppercase">{item.name}</h5>
                 <h5 className="card-subtitle mb-2 text-muted text-uppercase">{item.category}</h5>
                 <p className="card-text fs-3">${item.price} </p>
-                <Link to="/item:id">CLick</Link>
+               
             </div>
-         <button className="btn btn-warning w-100 my-2 text-uppercase">Show detail</button>
+            <NavLink to="/item/id:" className="btn btn-warning w-100 my-2 text-uppercase">Show detail</NavLink>
          </div>
      </div>  
     )
