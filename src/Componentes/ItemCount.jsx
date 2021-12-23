@@ -13,8 +13,8 @@ import React, { useState } from 'react';
          <div className="container text-center">
             <p> <i className="fas fa-shopping-cart"></i> {count} </p>
             
-           <button onClick={() => setCount(count + 1)}>Agregar</button>
-           <button onClick={() => setCount(count - 1)}> Restar </button>
+           <button onClick={() => setCount(count + 1)} className="btn btn-primary my-2 mx-2">+</button>
+           <button onClick={() => setCount(count - 1)} className="btn btn-primary my-2 mx-2"> - </button>
            {children}
          </div>
       );

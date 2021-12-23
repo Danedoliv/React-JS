@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Item from './Item'
-
+import ItemCount from './ItemCount'
 
 export default  function ItemDetail({ item }) {
  
@@ -15,8 +15,10 @@ export default  function ItemDetail({ item }) {
                <p className="card-text fs-3">${item.price}</p>
               
            </div>
-            <button className="btn btn-warning w-100 my-2 text-uppercase">Show detail</button>
+            <ItemCount/>
+            <NavLink to="/cart" className="btn my-3 btn-primary">Buy</NavLink>
         </div>
+
     </div> 
     )
    
