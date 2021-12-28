@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 
 export default function Item({item}) {
@@ -13,8 +14,9 @@ export default function Item({item}) {
                 <p className="card-text fs-3">${item.price} </p>
                
             </div>
-            <NavLink to="/item/id:" className="btn btn-warning w-100 my-2 text-uppercase">Show detail</NavLink>
+            <NavLink to="/item/id:" className="btn btn-primary w-100 my-2 text-uppercase">Show detail</NavLink>
          </div>
+         <ItemCount stock={item.stock} initial={1}/>
      </div>  
     )
 }

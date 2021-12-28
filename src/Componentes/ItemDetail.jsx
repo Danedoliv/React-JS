@@ -15,7 +15,7 @@ export default  function ItemDetail({ item }) {
                <p className="card-text fs-3">${item.price}</p>
               
            </div>
-            <ItemCount/>
+           <ItemCount item={item.id}/>
             <NavLink to="/cart" className="btn my-3 btn-primary">Buy</NavLink>
         </div>
 

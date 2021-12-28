@@ -1,10 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import {CarritoConsumer} from ".//CartContext"
 
-const CartWidget = () => {
+function CartWidget() {
+
+const {carrito} = CarritoConsumer();
+
     return (
-        <div>
+        <Link to="/cart" className="btn btn-primary">
+        <div className="d-flex align-items-center p-2 mx-3">
             <i className="fas fa-shopping-cart"></i>
+            <span className="text=light fs-5 mx-4">{carrito.length}</span>
         </div>
+        </Link>
     )
 }
 

@@ -4,12 +4,13 @@ import ItemDetailContainer from "../Componentes/ItemDetailContainer";
 import ItemListContainer from "../Componentes/ItemListContainer";
 import NavBar from "../Componentes/NavBar";
 import Cart from "../Views/Cart";
+import CartContext from "../Componentes/CartContext"
 
 export default function Rutas() {
     return (
         <BrowserRouter>
         <NavBar/>
-            
+        <CartContext>
         <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/category/:categoryid" element={<ItemListContainer/>}/>
@@ -17,6 +18,7 @@ export default function Rutas() {
         <Route path="/prueba" element={<Prueba/>}/>
         <Route path="/cart" element={<Cart/>} />
         </Routes>
+        </CartContext>    
         </BrowserRouter>
     )
 }

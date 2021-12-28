@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
 
+const ItemCount = ({stock, initial}) => {
+
+   const [cantidad, setCantidad] = useState(initial)
+
+   const agregarCantidad = () => {
+
+      if(cantidad < stock) {
+         setCantidad(cantidad++);
+      }
+   }
+
+   const reducirCantidad = () => {
+      if(cantidad < 2) {
+         setCantidad(cantidad++)
+      }
+   }
 
   
-  function ItemCount({ stock , initial, children }) {
-       const [count, setCount] = useState(initial);
-      
-       if (stock < count) {
-          setCount(0)
-       } 
 
        return (
-         <div className="container text-center">
-            <p> <i className="fas fa-shopping-cart"></i> {count} </p>
-            
-           <button onClick={() => setCount(count + 1)} className="btn btn-primary my-2 mx-2">+</button>
-           <button onClick={() => setCount(count - 1)} className="btn btn-primary my-2 mx-2"> - </button>
-           {children}
+         <div className="container mx-auto w-100 my-5">
+            <div className="border my-3">
+               <p className="text-muted fs-5 text-center">Stock : {stock}</p>
+            </div>
+            <div className="d-flex justify-content-around w-100">
+               <button className="btn btn-success">-</button>
+               <h5 className="fs-5">{cantidad}</h5>
+               <button className="btn btn-success py-0">+</button>
+            </div>
+            <div className="row">
+               <button className="btn btn-primary text-uppercase my-4">Agregar al Carrito</button>
+            </div>
          </div>
-      );
-     }
+      )
+   }
   
 
 export default ItemCount

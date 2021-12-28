@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 function NavBar () {
     return (
        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-           <CartWidget/>
+          
             <div className="container-fluid">
                 <Link to={'/'} className="navbar-brand">Navbar</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@ function NavBar () {
             </ul>
             </div>
             </div>
-            
+             <CartWidget/>
         </nav>
     )
 }
