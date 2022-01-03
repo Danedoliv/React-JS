@@ -16,7 +16,7 @@ export default function Item({item}) {
             </div>
             <NavLink to="/item/id:" className="btn btn-primary w-100 my-2 text-uppercase">Show detail</NavLink>
          </div>
-         <ItemCount stock={item.stock} initial={1}/>
+         <ItemCount stock={item.stock} initial={1} item={item}/>
      </div>  
     )
 }

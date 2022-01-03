@@ -1,9 +1,8 @@
 import {createContext, useContext, useState} from "react";
 
- const CarritoContext = createContext()
-export const CarritoConsumer = () => {
-    useContext(CarritoContext)
-}
+export const CarritoContext = createContext()
+export const CarritoConsumer = () => useContext(CarritoContext)
+
 
 const CartContext = ({children}) => {
 
@@ -11,12 +10,8 @@ const CartContext = ({children}) => {
 const [carrito, setCarrito] = useState([])
 
 
-    function addCarrito (item,cantidad) {
-        let nuevoItem = {
-            ...item,
-            cantidad
-        }
-        setCarrito([...carrito, nuevoItem])
+    function addCarrito (item) {
+        setCarrito([...carrito, item]);
     }
 
     return(

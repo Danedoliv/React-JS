@@ -1,20 +1,11 @@
-import React, { useState } from "react";
+import React from 'react'
 
 const Prueba = () => {
-
-    const [ state, setState] = useState ("No esta clickeado")
-
-
-
-
-    
-    return (    
+    return (
         <div>
-             <h1> {state} </h1>
-            <button> CLICKEA </button>
+            
         </div>
-
     )
 }
 
-export default Prueba 
+export default Prueba

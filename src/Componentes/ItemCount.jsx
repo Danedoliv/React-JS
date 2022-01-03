@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
+import { CarritoConsumer } from './CartContext';
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, item}) => {
+
+  
 
    const [cantidad, setCantidad] = useState(initial)
 
-   const agregarCantidad = () => {
+   const agregarCantidad = () => setCantidad(cantidad + 1)
 
-      if(cantidad < stock) {
-         setCantidad(cantidad++);
-      }
-   }
+      
+   
 
-   const reducirCantidad = () => {
-      if(cantidad < 2) {
-         setCantidad(cantidad++)
-      }
-   }
+   const reducirCantidad = () => setCantidad(cantidad - 1)
+   
 
   
 
@@ -25,9 +23,9 @@ const ItemCount = ({stock, initial}) => {
                <p className="text-muted fs-5 text-center">Stock : {stock}</p>
             </div>
             <div className="d-flex justify-content-around w-100">
-               <button className="btn btn-success">-</button>
+               <button onClick={reducirCantidad} className="btn btn-success">-</button>
                <h5 className="fs-5">{cantidad}</h5>
-               <button className="btn btn-success py-0">+</button>
+               <button onClick={agregarCantidad} className="btn btn-success py-0">+</button>
             </div>
             <div className="row">
                <button className="btn btn-primary text-uppercase my-4">Agregar al Carrito</button>
