@@ -16,11 +16,11 @@ function NavBar () {
                     <li className="nav-item">
                         <Link to=" /category/:categoryid" className="nav-link active" aria-current="page" >Category</Link>
                     </li>
-                   
+                    <CartWidget/>
             </ul>
             </div>
             </div>
-             <CartWidget/>
+             
         </nav>
     )
 }
